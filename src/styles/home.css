@@ -1,0 +1,10 @@
+.imagen {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(248, 249, 250);
+}
+
+.scroll {
+    overflow: scroll;
+}
+
