@@ -8,3 +8,12 @@
     overflow: scroll;
 }
 
+.circulo {
+    border-radius: 50%;
+    background-color: gainsboro;
+    width: 25px;
+}
+
+.dd-items {
+    align-items: center;
+}

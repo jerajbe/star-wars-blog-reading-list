@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: [],
 			starships: [],
 			singleItem: {},
-			favorites: []
+			favorites: [],
 		},
 		actions: {
 			getItems: async (resource) => {
@@ -55,7 +55,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			addFavorites: (resource) => {
 				setStore({
-					favorites: resource
+					favorites: [...getStore().favorites, resource]
+				})
+			},
+			deleteFavorites: (resource) => {
+				setStore({
+					favorites: [...getStore().favorites.filter((item, index)=>{
+						if (resource.name !== item.name) return true;
+					})]
 				})
 			}
 		}
