@@ -8,6 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			starships: [],
 			singleItem: {},
 			favorites: [],
+			heartButton: "outline-",
 		},
 		actions: {
 			getItems: async (resource) => {
@@ -57,6 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					favorites: [...getStore().favorites, resource]
 				})
+				getActions().holdHeartButton()
 			},
 			deleteFavorites: (resource) => {
 				setStore({
@@ -64,6 +66,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (resource.name !== item.name) return true;
 					})]
 				})
+			}, 
+			holdHeartButton: (e) => {
+				setStore({
+					heartButton: "",
+				}
+				)
 			}
 		}
 	};

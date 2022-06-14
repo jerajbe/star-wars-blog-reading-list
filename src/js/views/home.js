@@ -8,7 +8,7 @@ export const Home = () => {
 	return (
 	<div className="container">
 		<div className="container m-2">
-			<h2 className="text-danger">Character</h2>
+			<h2 className="text-warning">Character</h2>
 			<div className="d-flex flex-nowrap scroll ">
 				{store.people.map((item, index)=>{
 					return (
@@ -22,7 +22,7 @@ export const Home = () => {
 			</div>
 		</div>
 		<div className="container m-2">
-			<h2 className="text-danger">Planets</h2>
+			<h2 className="text-warning">Planets</h2>
 			<div className="d-flex flex-nowrap scroll">
 				{store.planets.map((item, index)=>{
 					return (
@@ -36,7 +36,7 @@ export const Home = () => {
 			</div>
 		</div>
 		<div className="container  m-2">
-			<h2 className="text-danger">Starships</h2>
+			<h2 className="text-warning">Starships</h2>
 			<div className="d-flex flex-nowrap scroll ">
 				{store.starships.map((item, index)=>{
 					return (
