@@ -17,7 +17,7 @@ export const Single = props => {
 						? "characters"
 						: params.resource}/${store.singleItem.uid}.jpg`}/>
 				</div>
-				<div className="col-6 d-flex flex-column justify-content-start align-middle">
+				<div className="col-6 d-flex flex-column justify-content-start align-middle text-warning">
 					<h2>{store.singleItem.name}</h2>
 					<p>{store.singleItem.description}</p>
 			<div className="row container mt-4 flex-column">

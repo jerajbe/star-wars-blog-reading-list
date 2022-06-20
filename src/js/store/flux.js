@@ -67,7 +67,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})]
 				})
 			}, 
-			holdHeartButton: (e) => {
+			holdHeartButton: () => {
 				setStore({
 					heartButton: "",
 				}

@@ -14,7 +14,8 @@ export const Card = ({item, ...props}) => {
             <h5 className="card-title text-white">{item.name}</h5>
             <div className="container-fluid justify-content-between p-0 d-flex">
                 <Link type="button" className="btn btn-outline-primary btn-sm" to={`/single/${props.resource}/${item.uid}`}>{"more details"}</Link >
-                <button type="button" className={`btn btn-${store.heartButton}warning btn-sm`} onClick={(e)=>{
+                <button type="button" className={`btn btn-${store.heartButton}warning btn-sm ${props.key}`} onClick={(e)=>{
+                    console.log(e.target)
                     actions.addFavorites({...item, resource: props.resource})
                 }}><i className="fa-regular fa-heart"></i></button>
             </div>
