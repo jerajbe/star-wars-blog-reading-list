@@ -55,10 +55,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 			},
 			addFavorites: (resource) => {
+				const store = getStore()
+				if (store.favorites.find(favorite => favorite.name == resource.name)) return
 				setStore({
-					favorites: [...getStore().favorites, resource]
+					favorites: [...store.favorites, resource]
 				})
-				getActions().holdHeartButton()
 			},
 			deleteFavorites: (resource) => {
 				setStore({
